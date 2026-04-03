@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Background -->
+  <div class="ambient-bg">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">Simon<span class="dot">.</span></div>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-page="about">About</a></li>
+        <li><a href="#" class="nav-link" data-page="resume">Resume</a></li>
+        <li><a href="#" class="nav-link" data-page="cv">CV</a></li>
+        <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- HOME -->
+    <section id="home" class="page active-page">
+      <div class="hero-section">
+        <div class="hero-inner">
+          <div class="hero-image-wrapper">
+            <div class="image-glow-layer"></div>
+            <div class="image-ring"></div>
+            <div class="image-ring ring-2"></div>
+            <div class="image-sparkles">
+              <span class="sparkle"></span>
+              <span class="sparkle"></span>
+              <span class="sparkle"></span>
+              <span class="sparkle"></span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Simon" class="hero-image">
+            <div class="image-shine"></div>
+          </div>
+
+          <div class="hero-text">
+            <span class="greeting">Hey I'm <span class="gradient-text">Simon</span></span>
+            <h1 class="hero-title">I'm a <span class="gradient-text">Web Developer</span></h1>
+            <p class="hero-description">
+              Passionate web developer specializing in crafting clean, elegant, and efficient web solutions. 
+              With expertise in modern frameworks and a keen eye for design.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+            </div>
+            <div class="hero-buttons">
+              <button class="btn btn-primary" onclick="navigateTo('contact')">
+                <i class="fas fa-envelope"></i> Get In Touch
+              </button>
+              <button class="btn btn-outline" onclick="navigateTo('resume')">
+                <i class="fas fa-file-alt"></i> View Resume
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page">
+      <div class="content-wrapper">
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="lead">I'm a dedicated professional with a passion for creating impactful digital solutions.</p>
+            <p>
+              With years of experience in web development and design, I bring a unique blend of technical expertise 
+              and creative vision to every project.
+            </p>
+            <div class="info-grid">
+              <div class="info-item">
+                <i class="fas fa-user"></i>
+                <div><span class="label">Name</span><span class="value">Simon</span></div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div><span class="label">Email</span><span class="value">simon@example.com</span></div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div><span class="label">Location</span><span class="value">New York, USA</span></div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-briefcase"></i>
+                <div><span class="label">Experience</span><span class="value">5+ Years</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <div class="about-glow"></div>
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Simon">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="page">
+      <div class="content-wrapper">
+        <h2 class="section-title">My <span class="gradient-text">Resume</span></h2>
+        
+        <div class="upload-section" id="resumeUploadSection">
+          <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+          <h3>Upload Your Resume</h3>
+          <p>Upload your resume (PDF or DOCX) - recruiters can download it from this page</p>
+          <input type="file" id="resumeFileInput" accept=".pdf,.docx,.doc" class="file-input">
+          <label for="resumeFileInput" class="upload-btn">
+            <i class="fas fa-file-import"></i> Choose Resume File
+          </label>
+          <div id="resumeUploadStatus" class="upload-status"></div>
+        </div>
+
+        <div class="download-section" id="resumeDownloadSection" style="display:none;">
+          <div class="download-card">
+            <div class="download-icon"><i class="fas fa-file-alt"></i></div>
+            <h3>Download My Resume</h3>
+            <p>Click the button below to download my professional resume</p>
+            <a href="#" id="resumeDownloadLink" class="btn btn-primary" download>
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <p class="file-info" id="resumeFileInfo"></p>
+          </div>
+        </div>
+
+        <div class="admin-controls" id="resumeAdminControls" style="display:none;">
+          <button class="btn btn-outline" onclick="removeResume()">
+            <i class="fas fa-trash"></i> Remove Resume
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="page">
+      <div class="content-wrapper">
+        <h2 class="section-title">My <span class="gradient-text">CV</span></h2>
+        
+        <div class="upload-section" id="cvUploadSection">
+          <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+          <h3>Upload Your CV</h3>
+          <p>Upload your CV (PDF or DOCX) - recruiters can download it from this page</p>
+          <input type="file" id="cvFileInput" accept=".pdf,.docx,.doc" class="file-input">
+          <label for="cvFileInput" class="upload-btn">
+            <i class="fas fa-file-import"></i> Choose CV File
+          </label>
+          <div id="cvUploadStatus" class="upload-status"></div>
+        </div>
+
+        <div class="download-section" id="cvDownloadSection" style="display:none;">
+          <div class="download-card">
+            <div class="download-icon"><i class="fas fa-id-card"></i></div>
+            <h3>Download My CV</h3>
+            <p>Click the button below to download my detailed CV</p>
+            <a href="#" id="cvDownloadLink" class="btn btn-primary" download>
+              <i class="fas fa-download"></i> Download CV
+            </a>
+            <p class="file-info" id="cvFileInfo"></p>
+          </div>
+        </div>
+
+        <div class="admin-controls" id="cvAdminControls" style="display:none;">
+          <button class="btn btn-outline" onclick="removeCV()">
+            <i class="fas fa-trash"></i> Remove CV
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page">
+      <div class="content-wrapper">
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Let's Connect</h3>
+            <p>I'm always open to discussing new projects and opportunities.</p>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-detail"><strong>Email</strong><p>simon@example.com</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-detail"><strong>Phone</strong><p>+1 (555) 123-4567</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-detail"><strong>Location</strong><p>New York, USA</p></div>
+            </div>
+          </div>
+          
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Name *</label>
+              <input type="text" id="contactName" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email *</label>
+              <input type="email" id="contactEmail" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" name="subject" placeholder="Project Inquiry">
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message *</label>
+              <textarea id="contactMessage" name="message" rows="5" required placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div id="formStatus" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
